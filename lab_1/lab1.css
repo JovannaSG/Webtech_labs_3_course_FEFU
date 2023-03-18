@@ -1,0 +1,30 @@
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    width: 300px;
+    height: 300px;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid black;
+}
+
+.grey_cell {
+    background-color: grey;
+}
+
+.v {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ex {
+    font-weight: bold;
+    font-size: medium;
+}
