@@ -1,23 +1,28 @@
 /**
- * Ввести последовательность чисел, признаком конца ввода является любое нечисловое значение, введенное пользователем. 
+ * Ввести последовательность чисел, 
+ * признаком конца ввода является любое нечисловое значение, введенное пользователем. 
  * Определить сколько из них больше своих «соседей», то есть предыдущего и последующего числа.
  */
 function ex_1() {
     document.writeln('<b>Задание 1</b>');
-    // 1 2 1 3 4 5 6 5 d
-    let current = 0;
-    let previous = 0;
-    let following = 0;
+
+    let current = null;
+    let previous = null;
+    let following = null;
     let count = 0;
 
     do {
-        if ((current > previous) && (current > following)) count += 1;
+        if ((parseFloat(current) > parseFloat(previous)) 
+            && (parseFloat(current) > parseFloat(following))
+            && current != null
+            && previous != null) 
+            count += 1;
         previous = current;
         current = following;
         following = prompt('Введите число', '');
     } while (!isNaN(parseFloat(following)) && isFinite(following));
 
-    console.log(count);
+    console.log(`count: ${count}`);
     document.write(`<p>Количество чисел, которые больше своих соседей: ${count}</p>`);
 }
 
@@ -190,5 +195,5 @@ function ex_3() {
 
 
 ex_1();
-ex_2();
-ex_3();
+//ex_2();
+//ex_3();
