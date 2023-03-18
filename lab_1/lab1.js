@@ -15,8 +15,10 @@ function ex_1() {
         if ((parseFloat(current) > parseFloat(previous)) 
             && (parseFloat(current) > parseFloat(following))
             && current != null
-            && previous != null) 
-            count += 1;
+            && previous != null)
+            {
+                count += 1;
+            }
         previous = current;
         current = following;
         following = prompt('Введите число', '');
