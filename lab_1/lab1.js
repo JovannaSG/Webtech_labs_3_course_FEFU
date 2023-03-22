@@ -181,7 +181,7 @@ function ex_3() {
 
         if (!(isNaN(parseFloat(help_str)) || !isFinite(help_str))) {
             for (let j = 0; j < help_str.length; j++) {
-                if (help_str[j] != '.') {
+                if (help_str[j] != '.' && help_str[j] != '-') {
                     sum += Number(help_str[j]);
                 }
             }
