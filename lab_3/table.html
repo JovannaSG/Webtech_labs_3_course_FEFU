@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="./table_style.css">
+        <script src="http://d3js.org/d3.v3.min.js"> </script>
     </head>
     <ul>
         <li><a href="./index.html">Рыбы Дальнего востока<br></a></li>
@@ -9,7 +10,28 @@
     </ul>
     <hr>
     <details>
-        <summary>График</summary>
+        <summary> График </summary>
+        <form>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Значениe по оси OX</th>
+                        <th>Результат</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="oxValue">Длина<br>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="oyValue">Вес<br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="button" value="Построить" onclick="createGraphic(this.form.oxValue.checked,
+                                                                            this.form.oyValue.checked)">
+            <p class="graphic"></p>
+        </form>  
     </details>
     <details>
         <summary>Фильтр</summary>
@@ -383,4 +405,5 @@
     </body>
     <script src="./Scripts/sortTable.js"></script>
     <script src="./Scripts/filterTable.js"></script>
+    <script src="./Scripts/gr.js"></script>
 </html>
